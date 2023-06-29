@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-configmap
+data:
+  myvalue: "Hello World"
+  drink: {{ .Values.favorite.drink | upper | quote }}
+  food: {{ .Values.favorite.food | repeat 5 | quote }}
+  food1: {{- .Values.favorite.food1 }}
+  {{- if eq .Values.favorite.food1 " bar" }}
+  mug: true
+  {{- end }}

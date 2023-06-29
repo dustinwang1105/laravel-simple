@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}
+    spec:
+      containers:
+      - name: {{ .Release.Name }}
+        image: asia.gcr.io/myvpn-385103/sit-docker/larademo:v1.0.1
+        imagePullPolicy: "Always"
+        resources:
+          limits:
+            cpu: 250m
+            memory: 256Mi
+          requests:
+            cpu: 150m
+            memory: 128Mi
+        ports:
+        - name: webapp-port
+          containerPort: 8080
+        livenessProbe:
+          httpGet:
+            path: /
+            port: webapp-port
+          initialDelaySeconds: 15
+          periodSeconds: 15
+          timeoutSeconds: 30  
+          successThreshold: 1
+          failureThreshold: 3

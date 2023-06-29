@@ -1,0 +1,46 @@
+docker build -t dustinwang/laratest:1.2 .
+docker run  -d --name laratest --rm -p 8000:8000 -d dustinwang/laratest:1.2
+
+docker push dustinwang/laratest:1.3
+
+k8s=========================================================
+minikube start --container-runtime=containerd
+
+kubectl create -f k8s/my-first-pod.yaml
+kubectl port-forward laratest-pod 8000:8000
+K8S內部跳版================================================
+kubectl run -i --tty alpine --image=alpine --restart=Never -- sh
+apk add --no-cache curl
+=========================================================
+kubectl create -f k8s/my-replication-controller.yaml
+kubectl scale --replicas=4 -f k8s/my-replication-controller.yaml
+kubectl delete rc my-replication-controller --cascade=false
+
+kubectl set image deployment my-laratest-deployment my-laratest=dustinwang/laratest:1.3 --record
+kubectl rollout history deployment my-laratest-deployment
+kubectl rollout undo deployment my-laratest-deployment
+
+kubectl create -f k8s/my-laratest-service.yaml 
+minikube service my-laratest-service --url
+
+gcloud====================================================
+https://blog.cloud-ace.tw/application-modernization/devops/gke-autopilot-tutorial/
+gcloud auth configure-docker asia-east1-docker.pkg.dev
+docker build -t asia-east1-docker.pkg.dev/stately-voltage-381808/sit-docker/laratest:1.0 .
+docker push asia-east1-docker.pkg.dev/stately-voltage-381808/sit-docker/laratest:1.0
+
+gcloud container clusters get-credentials asit-cluster --region=asia-east1
+
+cloudsql==================================================
+https://blog.cloud-ace.tw/database/cloud-sqlpart2-cloud-sql-proxy/
+cloud_sql_proxy -instances=stately-voltage-381808:asia-east1:my-dev-pgsql=tcp:5432 &
+QAZwsxp!@#
+
+pgbuncer================================================
+k8s
+https://jmrobles.medium.com/postgres-connection-pool-on-kubernetes-in-1-minute-80b8020315ef
+
+GCE==========================================================
+gcloud compute instances create gcelab2 --machine-type e2-medium --zone=asia-east1-b --project=stately-voltage-381808
+gcloud compute ssh --project=stately-voltage-381808 --zone=asia-east1-b gcelab
+

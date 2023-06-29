@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: larademo-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: larademo
+  template:
+    metadata:
+      labels:
+        app: larademo
+    spec:
+      containers:
+      - name: larademo
+        image: asia.gcr.io/stately-voltage-381808/sit-docker/larademo:v1.0.2
+        resources:
+          requests:
+            memory: "32Mi"
+            cpu: "100m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - name: webapp-port
+          containerPort: 8080
+        livenessProbe:
+          httpGet:
+            path: /
+            port: webapp-port
+          initialDelaySeconds: 15
+          periodSeconds: 15
+          timeoutSeconds: 30  
+          successThreshold: 1
+          failureThreshold: 3

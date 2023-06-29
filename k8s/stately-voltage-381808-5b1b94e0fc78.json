@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "stately-voltage-381808",
+  "private_key_id": "5b1b94e0fc7899d34c7031a3b443f88e31ecb131",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEugIBADANBgkqhkiG9w0BAQEFAASCBKQwggSgAgEAAoIBAQCe6a3tdu+E+PRh\nm7S+t10WiaJ70qm/mjiGJu7D+kZ7xZmL6tyZgCWu8eh3TPFOf+n8bWrcwfKxDriG\nBN1xei5vgNRKtLlIKjH3B52nXwuN76W8ApgBMVzhXcL2mVCntDqYCxBCTHImmVJz\nTagxSOiquO0V7nIZMxX9srlC+OsiHPHtK5wgHmv9z20UHICN8ld1Kpea/Pgc7bcY\nNaBTWpYYAzBDuHQe+GMgmuqeHfNtMkYdhQVmDyB7E/znPJbh6yDUQB0KjMXxHFOL\nxuK4OsFDPzkqcjcvUKVpQYxzf13Z/x/+bRjUHerKZVq/Hn/BZI5Ajdir2APIken6\nyl5dg//7AgMBAAECgf9l3YC39w+LFeMVSLamh8X4qMUw042WmAD9LNntdtlvjK6I\nX2SUnb6RoKU89IaQHCk8HyMkST3fS4ywEYck2X4hWjbjDW/aek0sHQtoTrLDqOsZ\nZEqojPhBOTF3VrSe0OfZz1uPGjsjh/0myY48maZopC6FQqTrEohq5Pz/mQ8qs73d\nr628y6hFeL5dSAlNJaRtVuSGM0ZFLZHi2+jNVcehTB4S/VQcXe92EqPXgu3D6Db7\n2x4ms8DIjDPsna5DZU50h5b5Kkq0j9ok4n/mklS2Y6daAoo4EMEbRFfRWNpBqhpz\n+rDGpSHm6j3EhfvSJurcdJiDmNLIivUim/72QlkCgYEA3la++TKlj74MzN2CQTOz\nO/SM+d5XRB7JpElF+FKzexEA4a+RQsMGxFKCLlwhJpgpWmnsEGDuIfQG0Go8+/In\nj0maZi1VDEyxqb7JAttZu333j6WS/XzCOegfRLH9z9o5ZvU7XqhlBKrhQgF3Rm17\nCoXygPxP4+roX790o2RJo4kCgYEAtvi2D6/HThIPuWvt6mpHqWpZiYiB0aQXMQ14\nVPMh7EYlB0qgwoxVDjCCETL95H1exG6wGatJDXIkqdzT57d99rhc3oLNM20e5+Me\n/lhTkGUrlhzahIf4CNmLQB54FJTFk/Ur6hwwexFwl7eukE9gWr8yhp3htwZXHrMt\nQN8RMmMCgYA11HS6Kqvw6Ed7FioiFR1Q5712BYHFSVryfpcFLyirJAu9mF8n9cXe\npEdGaCHSkUZ50GlJ8d3VtJotvXr0WMWBKIXMNS+BIdRlz34lRewsu6vDSIgU/S6d\nDHj9jcZwm1oIdlkgas7CWYjeDTLOh1Uh0BpNZkkFWmtWOylHIdG+WQKBgBxLtCQS\n4/iP1HyxUza4PuLVPomFYcYg4TFFywEgJHPcmSdahCfx+cla+RJd12O5e6lXEMa3\ndXGt4DugmeiwuLsp4brLcZ5tVqU3u3hMAohHDQmG5sguGs6LjfxZeep8410xQhxP\nRbQSi137GvTYQadnABJPYjOiuGBYBzyMAqXPAoGAPC8OkKxo3ZRCWH0SrjYz5eyG\npX0EzXfW654skyZmSQFW4W1EH9HqHxQWSzedSlKXEf33KA4g3vIyGKEEyRHUQ9MO\nTQ6Ei6Kz2bgO6xQy8qZkvb6dI8hLUQO1WpBWt+IzxtFG8I8Efs2uZt6uYBVv2iK5\njgvsdx1tLY7OiqQCYHA=\n-----END PRIVATE KEY-----\n",
+  "client_email": "csql-proxy-service@stately-voltage-381808.iam.gserviceaccount.com",
+  "client_id": "103107445997392604982",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/csql-proxy-service%40stately-voltage-381808.iam.gserviceaccount.com"
+}

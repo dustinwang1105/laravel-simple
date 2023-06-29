@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-laratest-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-laratest
+  template:
+    metadata:
+      labels:
+        app: my-laratest
+    spec:
+      containers:
+      - name: my-laratest
+        #image: dustinwang/laratest:1.2
+        image: asia-east1-docker.pkg.dev/stately-voltage-381808/sit-docker/laratest:1.0
+        resources:
+          requests:
+            memory: "32Mi"
+            cpu: "100m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - name: webapp-port
+          containerPort: 8000
+        livenessProbe:
+          httpGet:
+            path: /
+            port: webapp-port
+          initialDelaySeconds: 15
+          periodSeconds: 15
+          timeoutSeconds: 30  
+          successThreshold: 1
+          failureThreshold: 3

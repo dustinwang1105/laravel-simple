@@ -1,0 +1,13 @@
+# my-first-pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: laratest-pod
+  labels:
+    app: webserver
+spec:
+  containers:
+  - name: pod-demo
+    image: dustinwang/laratest:1.2
+    ports:
+    - containerPort: 8000

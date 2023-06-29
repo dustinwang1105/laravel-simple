@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-laratest-service
+spec:
+  type: NodePort
+  ports:
+  - port: 8000
+    nodePort: 30500
+    protocol: TCP
+    targetPort: 8000
+  selector:
+    app: my-laratest
